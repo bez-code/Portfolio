@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContantComponent } from './contant/contant.component';
+import { ProjectCardsComponent } from './project-cards/project-cards.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { ContantComponent } from './contant/contant.component';
     HomeComponent,
     PortfolioComponent,
     ResumeComponent,
-    ContantComponent
+    ContantComponent,
+    ProjectCardsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
