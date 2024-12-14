@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Project } from '../models/project';
 
 @Component({
   selector: 'app-project-cards',
@@ -6,8 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./project-cards.component.scss']
 })
 export class ProjectCardsComponent {
-  @Input() projectName: string = '';
-  @Input() projectDescription: string = '';
-  @Input() projectImage: string = '';
-  @Input() projectLink: string = '';
+  @Input() project = {} as Project;
+
 }

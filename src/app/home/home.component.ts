@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { ProjectService } from '../project.service';
+import { Project } from '../models/project';
+import { last } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
-  constructor(private titleService: Title){
+  featuresProjest = {} as Project
+  constructor(private titleService: Title, private projectService: ProjectService) {
     this.titleService.setTitle('Behzad Ashrafi - Home  ')
+  }
+  ngOnInit(): void {
+    this.featuresProjest = this.projectService.getProjectById(2)
   }
 }
