@@ -10,9 +10,9 @@ export class ProjectService {
 
   constructor() { }
   projects: Project[] = [
-    { id: 0, name: 'CRUD Project', summary: 'sample summary', discription: '', projectLink: '', pictures: [''], tags: [Tags.Angular, Tags.TypeScript] },
-    { id: 1, name: 'Netflix Clone', summary: 'sample summary', discription: '', projectLink: '', pictures: [''], tags: [Tags.Angular, Tags.TypeScript] },
-    { id: 2, name: 'Blog App', summary: 'sample summary', discription: '', projectLink: '', pictures: [''], tags: [Tags.Angular, Tags.TypeScript] }
+    { id: 0, name: 'CRUD Project', summary: 'sample summary', discription: '', projectLink: '', pictures: ["../../assets/1.JPG","../../assets/2.JPG","../../assets/2.JPG"], tags: [Tags.Angular, Tags.TypeScript] },
+    { id: 1, name: 'Netflix Clone', summary: 'sample summary', discription: '', projectLink: '', pictures: ["../../assets/1.JPG","../../assets/2.JPG","../../assets/2.JPG"], tags: [Tags.Angular, Tags.TypeScript] },
+    { id: 2, name: 'Blog App', summary: 'sample summary', discription: '', projectLink: '', pictures: ["../../assets/1.JPG","../../assets/2.JPG","../../assets/2.JPG"], tags: [Tags.Angular, Tags.TypeScript] }
   ]
 
   getProject() {
