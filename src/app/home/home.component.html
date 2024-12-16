@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg border shadow m-1">
-            <div class="text-center m-1" >
+            <div class="text-center m-1">
                 <h2>About Me</h2>
                 <img src="../../assets/profile.JPG" alt="profilePicture" class="rounded-circle">
                 <p class="text-center m-2">this is aboue me section</p>
@@ -12,7 +12,16 @@
                 <h2>Featured Project</h2>
                 <div class="card-body">
                     <h5 class="card-title">{{featuresProjest.name}} </h5>
+                </div>
+                <carousel>
+                    <div *ngFor="let picture of featuresProjest.pictures">
+                        <slide>
+                            <img src={{picture}} alt="first slide" style="display: block; width: 100%; height: 400px;">
+                        </slide>
+                    </div>
+                </carousel>
+                <p class="mt-2">{{featuresProjest.summary}}</p>
+                <p>Visit the Portfolio section to learn more!</p>
             </div>
         </div>
     </div>
-</div>

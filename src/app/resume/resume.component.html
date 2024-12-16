@@ -1,1 +1,91 @@
-<p>resume works!</p>
+<div class="container text-center">
+    <button class="btn btn-primary mb-5 shadow border" (click)="downloadFile()">Download PDF Resume</button>
+    <accordion [closeOthers]="oneAtATime" [isAnimated]="true" class="shadow ">
+        <accordion-group [(isOpen)]="isWorkExpreinceOpen">
+            <button accordion-heading class="btn btn-block d-flex w-100 justify-content-between">
+                <div class="btn-link">Work Expreince </div>
+                <div style="color: white;" *ngIf="!isWorkExpreinceOpen">></div>
+                <div style="color: white;" *ngIf="isWorkExpreinceOpen">v</div>
+            </button>
+            <div style="text-align: left;">
+                <h2 class="mb-1">Front-end Developer</h2>
+                <h3 class="text-primary">Fintranet</h3>
+                <ul>
+                    <li>this is test</li>
+                    <li>this is test2</li>
+                    <li>this is test3</li>
+                </ul>
+            </div>
+            <hr>
+            <div style="text-align: left;">
+                <h2 class="mb-1">Front-end Developer Intern</h2>
+                <ul>
+                    <li>this is test</li>
+                    <li>this is test2</li>
+                    <li>this is test3</li>
+                </ul>
+            </div>
+        </accordion-group>
+        <accordion-group [(isOpen)]="isEducationOpen">
+            <button accordion-heading class="btn btn-block d-flex w-100 justify-content-between">
+                <div class="btn-link">Education</div>
+                <div style="color: white;" *ngIf="!isEducationOpen">></div>
+                <div style="color: white;" *ngIf="isEducationOpen">v</div>
+            </button>
+            <div style="text-align: left;">
+                <h2 class="mb-1">Bachleor on Computer Engineering</h2>
+                <h3 class="text-primary">Allame Ghazvivi University</h3>
+            </div>
+            <div style="text-align: left;">
+                <h2 class="mb-1">Master of Business Administration</h2>
+                <h3 class="text-primary">Arel University</h3>
+            </div>
+        </accordion-group>
+        <accordion-group [(isOpen)]="isCertificatesOpen">
+            <button accordion-heading class="btn btn-block d-flex w-100 justify-content-between">
+                <div class="btn-link">Education</div>
+                <div style="color: white;" *ngIf="!isCertificatesOpen">></div>
+                <div style="color: white;" *ngIf="isCertificatesOpen">v</div>
+            </button>
+            <div style="text-align: left;">
+                <h2 class="mb-1">Udemy Angular Course</h2>
+                <h3 class="text-primary">Udemy</h3>
+                <ul>
+                    <li>Obtained Aug 2023</li>
+                </ul>
+            </div>
+        </accordion-group>
+        <accordion-group [(isOpen)]="isSkillsOpen">
+            <button accordion-heading class="btn btn-block d-flex w-100 justify-content-between">
+                <div class="btn-link">Skills</div>
+                <div style="color: white;" *ngIf="!isSkillsOpen">></div>
+                <div style="color: white;" *ngIf="isSkillsOpen ">v</div>
+            </button>
+            <div style="text-align: left;" class="row">
+                <div class="col">
+                    <h3 class="text-primary">Programming Language</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3 class="text-primary">Framework and Library</h3>
+                    <ul>
+                        <li>Angular</li>
+                        <li>Ionic</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3 class="text-primary">Other Skills</h3>
+                    <ul>
+                        <li>solving Problem</li>
+                        <li>Critical Mindset</li>
+                    </ul>
+                </div>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>

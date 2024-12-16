@@ -14,6 +14,9 @@ import { ProjectCardsComponent } from './project-cards/project-cards.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +28,16 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
     ContantComponent,
     ProjectCardsComponent,
     ProjectModalComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    AccordionModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
