@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectService } from '../project.service';
 import { Project } from '../models/project';
-import { last } from 'rxjs';
 
 @Component({
   selector: 'app-home',
