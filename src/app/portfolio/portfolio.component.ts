@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../models/project';
-import { Tags } from '../models/tags';
 import { ProjectService } from '../project.service';
+import { Repository } from '../models/repository';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,15 +12,23 @@ import { ProjectService } from '../project.service';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor(private titleService: Title, private projectServive: ProjectService) {
+  repositories: Repository[] = [];
+
+
+  constructor(private titleService: Title, private projectService: ProjectService) {
     this.titleService.setTitle('Behzad Ashrafi - Portfolio')
   }
   ngOnInit(): void {
-    this.projects = this.projectServive.getProject()
+    this.fetchRepositories()    
   }
 
-  projects: Project[] = []
 
-
+  fetchRepositories() {
+    this.projectService.getRepositories().subscribe(
+      (repositories) => {
+        this.repositories = repositories;
+      }
+    )
+  }
 }
 
