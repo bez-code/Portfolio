@@ -1,50 +1,21 @@
-<!-- <div class="card shadow text-center hvr-float-shadow" >
-    <div class="card-body">
-        <h5 class="card-title">{{project.name}} </h5>
-        <p class="card-text">{{project.summary}}</p>
-        <button class="btn btn-primary"
-        (click)="openModal()">View More</button>
-    </div>
-    <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
-            <div *ngFor="let tag of project.tags">
-                <div class="tag me-2 mb-1" [style.background-color]="tag.getColor()">{{tag}}</div>
-            </div>
-        </div>
-    </div>
-</div>  -->
-
-<!-- <div class="card shadow text-center hvr-float-shadow" *ngFor="let repo of repositories" >
-    <div class="card-body"  >
-       
-            <h5 class="card-title">{{ repo.name }} </h5>
-            <p class="card-text">{{ repo.description }}</p>
-            <p>{{repo.html_url}}</p>
-            <p>{{repo.updated_at}}</p>
-            <p>{{repo.private}}</p>
-            <button class="btn btn-primary"
-            (click)="openModal()">View More</button>
-       
-    </div> -->
-    <!-- <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
-            <div *ngFor="let tag of project.tags">
-                <div class="tag me-2 mb-1" [style.background-color]="tag.getColor()">{{tag}}</div>
-            </div>
-        </div>
-    </div>
-</div>  -->
-
 <div class="container mt-4">
     <div class="row">
-      <div class="col-md-4  mb-4" *ngFor="let repo of repositories">
-        <div class="card shadow text-center hvr-float-shadow">
-          <div class="card-body">
-            <h5 class="card-title">{{ repo.name }}</h5>
-            <p class="card-text">{{ repo.description }}</p>
-            <button class="btn btn-primary" (click)="openModal()">View More</button>
-          </div>
+        <div class="col-md-4  mb-4" *ngFor="let repo of repositories">
+            <div class="card shadow text-center hvr-float-shadow">
+                <div class="card-body">
+                    <h5 class="card-title">{{ repo.name }}</h5>
+                    <p class="card-text">{{ repo.description }}</p>
+                    <button class="btn btn-primary" (click)="openModal(repo)">View More</button>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div *ngFor="let tag of repo.tags">
+                            <div class="tag me-2 mb-1" [style.background-color]="tag.getColor()">{{tag}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+</div>

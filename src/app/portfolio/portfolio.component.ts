@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Project } from '../models/project';
 import { ProjectService } from '../project.service';
 import { Repository } from '../models/repository';
 import { take } from 'rxjs';

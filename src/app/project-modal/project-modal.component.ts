@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Project } from '../models/project';
+import { Repository } from '../models/repository';
 
 @Component({
   selector: 'app-project-modal',
@@ -9,8 +9,8 @@ import { Project } from '../models/project';
 })
 export class ProjectModalComponent {
 
-  project = {} as Project;
+  @Input() project!: Repository;
 
-  constructor(public bsModalRef: BsModalRef){}
+  constructor(public bsModalRef: BsModalRef) { }
 
 }

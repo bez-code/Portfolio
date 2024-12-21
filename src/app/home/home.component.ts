@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectService } from '../project.service';
-import { Project } from '../models/project';
+import { Repository } from '../models/repository';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import { Project } from '../models/project';
 })
 export class HomeComponent implements OnInit {
 
-  featuresProjest = {} as Project
+  featuresProjest = {} as Repository
   constructor(private titleService: Title, private projectService: ProjectService) {
     this.titleService.setTitle('Behzad Ashrafi - Home  ')
   }

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Project } from '../models/project';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
 import { ProjectModalComponent } from '../project-modal/project-modal.component';
 import { ProjectService } from '../project.service';
@@ -23,12 +22,12 @@ export class ProjectCardsComponent implements OnInit {
 
   }
 
-  openModal() {
+  openModal(project: Repository) {
     const modalOption: ModalOptions = {
       class: 'modal-lg',
       initialState: {
-        project: this.repositories
-      },
+        project: project
+            },
       animated: true
     };
     this.bsModalRef = this.modalService.show(ProjectModalComponent, modalOption);
