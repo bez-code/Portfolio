@@ -8,9 +8,10 @@ import { Repository } from './models/repository';
 })
 export class ProjectService {
 
-  repo: Repository[]=[]
+  repo: Repository[] = []
+
   constructor(private http: HttpClient) { }
-  
+
 
   getProjectById(id: number): Repository {
     let project = this.repo.find(project => project.id === id);
@@ -20,11 +21,20 @@ export class ProjectService {
     }
     return project;
   }
- private baseUrl = 'https://api.github.com/users/bez-code';
+  private baseUrl = 'https://api.github.com/users/bez-code';
 
- getRepositories(): Observable<Repository[]> {
-  return this.http.get<Repository[]>(`${this.baseUrl}/repos`);
-}
- 
+  getRepositories(): Observable<Repository[]> {
+    return this.http.get<Repository[]>(`${this.baseUrl}/repos`);
+  }
+
+  getColor(tag: string): string {
+    const colors: { [key: string]: string } = {
+      'angular-framework': '#dd1b16',
+      'TypeScript': '#007acc',
+      'JavaScript': '#f7df1e',
+      // Add more tag colors as needed
+    };
+    return colors[tag] || '#6c757d';
+  }
 
 }

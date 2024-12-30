@@ -16,8 +16,8 @@
     <p>You can finf this project on <a href={{project.html_url}} target="_blank">GitHub</a></p>
     <hr>
     <div class="d-flex flex-wrap justify-content-center">
-        <div *ngFor="let tag of project.tags">
-            <div class="tag me-2 mb-1" [style.background-color]="tag.getColor()">{{tag}}</div>
+        <div *ngFor="let tag of project.topics">
+            <div class="tag me-2 mb-1" [style.background-color]="getColor(tag)">{{tag}}</div>
         </div>
     </div>
 </div>

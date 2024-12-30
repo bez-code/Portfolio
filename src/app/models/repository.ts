@@ -7,5 +7,5 @@ export interface Repository {
     html_url: string; // URL of the repository
     description: string | null; // Repository description
     updated_at: string; // Last update timestamp
-    tags: Tags[];
+    topics: [];
 }

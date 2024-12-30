@@ -12,15 +12,18 @@ import { Repository } from '../models/repository';
 export class ProjectCardsComponent implements OnInit {
 
   repositories: Repository[] = [];
+  imageMapping: any = {};
+
   
   bsModalRef?: BsModalRef;
 
   constructor(private modalService: BsModalService, private projectService: ProjectService) { }
   
   ngOnInit(): void {
-   this.fetchRepositories()
+   this.fetchRepositories();
+ 
+}
 
-  }
 
   openModal(project: Repository) {
     const modalOption: ModalOptions = {
@@ -41,6 +44,10 @@ export class ProjectCardsComponent implements OnInit {
 
       }
     )
+  }
+
+  getColor(tag: string): string {
+    return this.projectService.getColor(tag);
   }
 
 }
