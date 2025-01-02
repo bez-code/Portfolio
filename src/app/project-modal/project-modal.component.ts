@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Repository } from '../models/repository';
-import { ProjectService } from '../project.service';
+import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-project-modal',
@@ -15,8 +15,11 @@ export class ProjectModalComponent {
   constructor(public bsModalRef: BsModalRef, 
     private projectService: ProjectService
   ) { }
+
   getColor(tag: string): string {
     return this.projectService.getColor(tag);
+    console.log(this.project.pictures);
+    
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
 import { ProjectModalComponent } from '../project-modal/project-modal.component';
-import { ProjectService } from '../project.service';
+import { ProjectService } from '../services/project.service';
 import { Repository } from '../models/repository';
 
 @Component({
@@ -12,16 +12,14 @@ import { Repository } from '../models/repository';
 export class ProjectCardsComponent implements OnInit {
 
   repositories: Repository[] = [];
-  imageMapping: any = {};
-
   
   bsModalRef?: BsModalRef;
 
-  constructor(private modalService: BsModalService, private projectService: ProjectService) { }
+  constructor(private modalService: BsModalService, public projectService: ProjectService) { }
   
   ngOnInit(): void {
    this.fetchRepositories();
- 
+
 }
 
 

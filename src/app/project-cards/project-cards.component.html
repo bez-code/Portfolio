@@ -6,18 +6,15 @@
                     <h5 class="card-title">{{ repo.name }}</h5>
                     <p class="card-text">{{ repo.description }}</p>
                     <button class="btn btn-primary" (click)="openModal(repo)">View More</button>
-                  
                 </div>
                 <div class="card-footer">
                     <div class="d-flex flex-wrap justify-content-center">
                         <div *ngFor="let tag of repo.topics">
                             <div class="tag me-2 mb-1" [style.background-color]="getColor(tag)">{{tag}}</div>
                         </div>
-                      
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>

@@ -4,16 +4,16 @@
 </div>
 <div class="modal-body">
     <carousel>
-        <!-- <div *ngFor="let picture of project.pictures">
+        <div *ngFor="let picture of project.pictures">
             <slide>
                 <img src={{picture}} alt="first slide" style="display: block; width: 100%; height: 500px;">
             </slide>
-        </div> -->
+        </div>
     </carousel>
 
     <h3 class="mt-3">Discription</h3>
     <p>{{project.description}}</p>
-    <p>You can finf this project on <a href={{project.html_url}} target="_blank">GitHub</a></p>
+    <p>You can find this project on <a href={{project.html_url}} target="_blank">GitHub</a></p>
     <hr>
     <div class="d-flex flex-wrap justify-content-center">
         <div *ngFor="let tag of project.topics">

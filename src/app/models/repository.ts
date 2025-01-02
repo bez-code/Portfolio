@@ -1,4 +1,3 @@
-import { Tags } from "./tags";
 
 export interface Repository {
     id: number; // Repository ID
@@ -8,4 +7,5 @@ export interface Repository {
     description: string | null; // Repository description
     updated_at: string; // Last update timestamp
     topics: [];
+    pictures: string[];
 }
